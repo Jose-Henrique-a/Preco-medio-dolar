@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Preço Médio do Dólar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body style="background-image: url('5-dolar-real.png'); background-size: cover;">
+    <div class="container">
+        <h1>Calcular Preço Médio do Dolar</h1>
+
+        <div id="inputs-container">
+            <div class="input-row">
+                <span class="remove-button" onclick="removeRow(this)">X</span>
+                <input type="number" id="reais-input" class="reais-input" placeholder="Investimento em Reais" step="0.01"  oninput="calculateDollar(this.parentNode)">
+                <input type="number" id="dolar-input" class="dolar-input" placeholder="Cotação do Dolar" step="0.01" oninput="calculateDollar(this.parentNode)" >
+                <p>Reais R$ </p>
+                <span class="reais-value">0,00</span>
+                <p>|Dolares U$ </p>
+                <span class="dolar-value">0,00</span>
+                
+            </div> 
+        </div>
+
+        <button id="add-button" onclick="addRow()">+</button>
+        <div class="totals">
+            <p>Total Investido em Dolar: U$ <span id="total-dolar">0,00</span></p>
+            <p>Total Investido em Reais: R$ <span id="total-reais">0,00</span></p>
+            <p>Preço Médio do Seu dolar: R$ <span id="preco-medio">0,00</span></p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h1>Conversor de Dólar para Reais</h1>
+        <div class="input-group">
+            <label for="valorDolar">Valor em Dólar ($):</label>
+            <input type="number" id="valorDolar" step="0.01" placeholder="Quantos dólares">
+        </div>
+        <div class="input-group">
+            <label for="realDolar">Cotação Real/Dólar (R$/USD):</label>
+            <input type="number" id="realDolar" step="0.01" placeholder="Digite a cotação">
+        </div>
+        <button onclick="converterDolarParaReais()">Calcular</button>
+        <div id="resultadoConversao"></div>
+    </div>
+
+</body>
+</html>
