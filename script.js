@@ -20,10 +20,10 @@ function addRow() {
     newRow.innerHTML = `
                  <span class="remove-button" onclick="removeRow(this)">X</span>
                 <input type="number" id="reais-input" class="reais-input" placeholder="Investimento em Reais" step="0.01"  oninput="calculateDollar(this.parentNode)">
-                <input type="number" id="dolar-input" class="dolar-input" placeholder="Cotação do Dolar" step="0.01" oninput="calculateDollar(this.parentNode)" >
+                <input type="number" id="dolar-input" class="dolar-input" placeholder="Cotação do Dólar" step="0.01" oninput="calculateDollar(this.parentNode)" >
                 <p>Reais R$ </p>
                 <span class="reais-value">0,00</span>
-                <p>|Dolares U$ </p>
+                <p>|Dólares U$ </p>
                 <span class="dolar-value">0,00</span>
     `;
     inputsContainer.appendChild(newRow);
